@@ -1,0 +1,99 @@
+@import '../../styles/vars';
+
+.container__index {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 3em;
+}
+
+.overview {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 80vh;
+    padding-top: 2em;
+    margin-left: 2em;
+    width: 40%;
+}
+
+.tracking {
+    display: flex;
+    height: 8.5%;
+    margin: .2em 2em;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-shadow: black 2px 2px 2px;
+}
+.tracking__consultant {
+    padding: .5em;
+    padding-left: 1em;
+    margin-right: .5em;
+    border-radius: 10px;
+    width: 7em;
+    display: flex;
+    align-items: center;
+}
+
+.tracking__date {
+    padding: .5em;
+    width: 3em;
+    border-radius:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tracking__consultant--urgent {
+    background-color: $urgent;
+}
+
+.tracking__consultant--follow {
+    background-color: $follow;
+}
+
+.tracking__consultant--good {
+    background-color: $good;
+}
+
+.tracking__date--urgent {
+    background-color: $urgent;
+}
+
+.tracking__date--follow {
+    background-color: $follow;
+}
+
+.tracking__date--good {
+    background-color: $good;
+}
+
+.leftPanel {
+    height: 90%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2em;
+}
+
+.leftPanel__image {
+    width: 25em;
+}
+
+.leftPanel__button {
+    width: 10em;
+    height: 5em;
+    margin: .5em;
+    background: $zenikaGradient;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 2em;
+    font-weight: 700;
+    padding: 1em;
+    text-shadow: black 2px 2px 2px;
+    cursor: pointer;
+}
