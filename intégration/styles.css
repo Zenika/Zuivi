@@ -1,0 +1,425 @@
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+}
+
+a {
+    cursor: pointer;
+}
+
+.header {
+    background: linear-gradient(90deg, rgba(223,39,69,1) 0%, rgba(191,4,110,1) 100%);
+    padding: .5em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header__image {
+    height: 5em;
+}
+.header__title {
+    text-shadow: black 2px 2px 2px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.header__button {
+    font-family: 'Comfortaa', cursive;
+    font-size: 1em;
+    font-weight: 700;
+    border: none;
+    height: 4em;
+    padding: 1.2em;
+    border-radius: 50px;
+    border-radius: 50px;
+    color: white;
+    border-radius: 17px;
+    background: linear-gradient(145deg, #cc0476, #ac0463);
+    box-shadow:  6px 6px 12px #82034b,
+                 -6px -6px 12px #fc0591;
+    text-shadow: black 2px 2px 2px;
+    cursor: pointer;
+}
+
+.header__button:hover {
+    border-radius: 17px;
+    background: linear-gradient(145deg, #ac0463, #cc0476);
+    box-shadow:  6px 6px 12px #82034b,
+             -6px -6px 12px #fc0591;
+            }
+
+
+/** overview tracking consultant **/
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.container__index {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 3em;
+}
+
+.overview {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 80vh;
+    padding-top: 2em;
+    margin-left: 2em;
+    width: 40%;
+}
+
+.tracking {
+    display: flex;
+    height: 8.5%;
+    margin: .2em 2em;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-shadow: black 2px 2px 2px;
+}
+.tracking__consultant {
+    padding: .5em;
+    padding-left: 1em;
+    margin-right: .5em;
+    border-radius: 10px;
+    width: 7em;
+    display: flex;
+    align-items: center;
+}
+
+.tracking__date {
+    padding: .5em;
+    width: 3em;
+    border-radius:10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tracking__consultant--urgent {
+    background-color: #df2745;
+}
+
+.tracking__consultant--follow {
+    background-color: #fc9453;
+}
+
+.tracking__consultant--good {
+    background-color: #258900;
+}
+
+.tracking__date--urgent {
+    background-color: #df2745;
+}
+
+.tracking__date--follow {
+    background-color: #fc9453;
+}
+
+.tracking__date--good {
+    background-color: #258900;
+}
+
+.leftPanel {
+    height: 90%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 2em;
+}
+
+.leftPanel__image {
+    width: 25em;
+}
+
+.leftPanel__button {
+    width: 10em;
+    height: 5em;
+    margin: .5em;
+    background: linear-gradient(90deg, rgba(223,39,69,1) 0%, rgba(191,4,110,1) 100%);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    font-size: 2em;
+    font-weight: 700;
+    padding: 1em;
+    text-shadow: black 2px 2px 2px;
+    cursor: pointer;
+}
+
+
+
+/** --------------------- consultant page--------------- **/
+
+.container__consultant {
+    display: flex;
+    padding-top: 3em;
+    justify-content: center;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.consultant {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.consultant__picture {
+    width: 7em;
+    height: 7em;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 3em;
+}
+
+.consultant__name {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.consultant__firstName {
+    background: linear-gradient(90deg, rgba(223,39,69,1) 0%, rgba(191,4,110,1) 100%);
+    padding: .5em;
+    border-radius: 10px;
+    width: 8em;
+    display: flex;
+    align-items: center;
+    font-size: 1.15em;
+    font-weight: 700;
+    text-shadow: black 2px 2px 2px;
+    margin-bottom: 1.2em;
+
+}
+
+.consultant__lastName {
+    background: linear-gradient(90deg, rgba(223,39,69,1) 0%, rgba(191,4,110,1) 100%);
+    padding: .5em;
+    border-radius: 10px;
+    width: 8em;
+    display: flex;
+    align-items: center;
+    font-size: 1.15em;
+    font-weight: 700;
+    text-shadow: black 2px 2px 2px;
+
+}
+
+.infos {
+    background: linear-gradient(90deg, rgba(223,39,69,1) 0%, rgba(191,4,110,1) 100%);
+    margin: 2em;
+    padding: 1.3em;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 2em;
+    text-shadow: black 2px 2px 2px;
+    position: relative;
+
+}
+
+.infos__modif {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    filter: drop-shadow(2px 2px 2px black);
+}
+
+.newMeetingPoint {
+    border: none;
+    background: linear-gradient(90deg, rgba(223,39,69,1) 0%, rgba(191,4,110,1) 100%);
+    color: white;
+    font-size: 1.3em;
+    border-radius: 10px;
+    padding: .5em;
+    margin: 1.2em;
+    cursor: pointer;
+}
+
+.trackingInfos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .7em;
+    border: white solid 1px;
+    border-radius: 5px;
+    width: 75%;
+}
+
+.tracking__urgent {
+    background-color: #df2745;
+    padding: .3em;
+    height: 2em;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: .3em;
+}
+
+.lastsMeetings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 3em;
+    text-shadow: black 2px 2px 2px;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 0;
+    padding-bottom: 1em;
+}
+
+.lastsMeetings__title {
+    margin-top: 0;
+    border: white 2px solid;
+    padding: 1em;
+    width: 85%;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+    font-weight: 1.3em;
+}
+
+.lastsMeetings__infos {
+    line-height: 2em;
+    padding: 1em;
+    margin: .5em;
+    border-radius: 10px;
+    background-color: #285899;
+    width: 70%;
+}
+
+/** --------- connexion ----------- **/
+
+.formConnexion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+.formConnexion__image{
+    width: 20em;
+}
+
+.formConnexion__input {
+    width: 25%;
+    margin: 1.5em;
+    height: 4em;
+    border: solid white 1px;
+    background: linear-gradient(90deg, rgba(223,39,69,1) 0%, rgba(191,4,110,1) 100%);
+    border-radius: 10px;
+    color: white;
+}
+
+.formConnexion__input::placeholder {
+    text-align: center;
+    color: white;
+    font-size: 2em;
+}
+
+.formConnexion__button {
+    border: none;
+    background: linear-gradient(90deg, rgba(223,39,69,1) 0%, rgba(191,4,110,1) 100%);
+    color: white;
+    font-size: 2em;
+    border-radius: 10px;
+    padding: .5em;
+    width: 5em;
+    margin: .5em;
+    cursor: pointer;
+}
+
+/** ------- New meeting point ------- **/
+
+.container__newMeeting {
+    display: flex;
+    justify-content: center;
+    padding-top: 3em;
+}
+
+/** ------ New consulant ------ **/
+
+.container__newConsultant {
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+}
+
+/** ----- modif consultant --- **/
+
+.container__modifConsultant {
+    display: flex;
+    justify-content: center;
+    padding-top: 1em;
+}
+
+/** ----- forms ----- **/
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__title{
+    text-transform: uppercase;
+}
+
+.form__label {
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+
+.form__input {
+    background: linear-gradient(90deg, rgba(223,39,69,1) 0%, rgba(191,4,110,1) 100%);
+    color: white;
+    border: none;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.form__select {
+    background: linear-gradient(90deg, rgba(223,39,69,1) 0%, rgba(191,4,110,1) 100%);
+    color: white;
+    border: none;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.form__comment{
+    background: linear-gradient(90deg, rgba(223,39,69,1) 0%, rgba(191,4,110,1) 100%);
+    color: white;
+    border: none;
+    padding: 1em;
+    border-radius: 10px; 
+}
+
+.form__button{
+    border: none;
+    background: linear-gradient(90deg, rgba(223,39,69,1) 0%, rgba(191,4,110,1) 100%);
+    color: white;
+    font-size: 1.9em;
+    border-radius: 10px;
+    padding: .5em;
+    width: 5.5em;
+    margin: .7em;
+    cursor: pointer;
+    align-self: center;
+}
+
+.form a{
+    align-self: center;
+}
