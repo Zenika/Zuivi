@@ -1,0 +1,58 @@
+@import '../../styles/vars';
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__title{
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 900;
+}
+
+.form__label {
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+
+.form__input {
+    background: linear-gradient(90deg, rgba(223,39,69,1) 0%, rgba(191,4,110,1) 100%);
+    color: white;
+    border: none;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.form__select {
+    background: linear-gradient(90deg, rgba(223,39,69,1) 0%, rgba(191,4,110,1) 100%);
+    color: white;
+    border: none;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.form__comment{
+    background: linear-gradient(90deg, rgba(223,39,69,1) 0%, rgba(191,4,110,1) 100%);
+    color: white;
+    border: none;
+    padding: 1em;
+    border-radius: 10px; 
+}
+
+.form__button{
+    border: none;
+    background: linear-gradient(90deg, rgba(223,39,69,1) 0%, rgba(191,4,110,1) 100%);
+    color: white;
+    font-size: 1.9em;
+    border-radius: 10px;
+    padding: .5em;
+    width: 5.5em;
+    margin: .7em;
+    cursor: pointer;
+    align-self: center;
+}
+
+.form a{
+    align-self: center;
+}
