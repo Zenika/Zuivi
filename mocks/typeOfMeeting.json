@@ -1,0 +1,15 @@
+{
+    "request": {
+        "method": "GET",
+        "path": "/consultants"
+    },
+    "response": {
+        "body": [
+            {
+                "createdAt": "2022-10-03T07:08:24.468Z",
+                "name": "Customer Functionality Technician",
+                "id": "1"
+            }
+        ]
+    }
+  }
