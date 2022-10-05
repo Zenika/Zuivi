@@ -2,10 +2,14 @@
 import './style.scss';
 import zenika from 'src/assets/images/Vertical_White_Logo Zenika.png';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import BlockConsultant from './blockConsultant';
 
 
 // Composant
 function Overview() {
+    const { consultants } = useSelector((state) => state.consultant);
+    console.log(consultants);
     return (
         <main className="container__index">
             <div className="leftPanel">
@@ -14,7 +18,13 @@ function Overview() {
                 <Link to="/newconsultant"><button className="leftPanel__button">New consultant</button></Link>
             </div>
             <div className="overview">
-                <Link to="/consultant" className="tracking">
+
+                { consultants.meetinglength > 0 &&
+                consultants.map((consultant) => (
+                    <BlockConsultant {...consultant}/>
+                ))}
+
+                {/* <Link to="/consultant" className="tracking">
                     <div className="tracking__consultant tracking__consultant--urgent">Taaki</div>
                     <div className="tracking__date tracking__date--urgent">16/07</div>
                 </Link>
@@ -96,7 +106,7 @@ function Overview() {
                 <Link to="/consultant" className="tracking">
                     <div className="tracking__consultant tracking__consultant--good">Jake</div>
                     <div className="tracking__date tracking__date--good">20/09</div>
-                </Link>
+                </Link> */}
             </div>
 
         </main>

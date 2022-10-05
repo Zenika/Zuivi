@@ -8,9 +8,18 @@ import NewConsultant from '../NewConsultant';
 import Consultant from '../Consultant';
 import EditConsutant from '../EditConsultant';
 import Connexion from '../Connexion';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { getConsultants } from '../../actions/getConsultants';
 
 // == Composant
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getConsultants())
+  }, [])
+
   return (
     <div className="app">
       <Header />

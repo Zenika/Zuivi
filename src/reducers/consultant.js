@@ -1,23 +1,20 @@
 
-//  import les actions from 'le fichier correspondant'
+
+import { SAVE_CONSULTANTS } from "../actions/getConsultants";
 
   
   export const initialState = {
-  // le state initial
+    consultants: {},
   };
   
   const reducer = (state = initialState, action = {}) => {
     switch (action.type) {
-      case CHANGE_REDIRECTION:
+      case SAVE_CONSULTANTS:
         return {
           ...state,
-          redirection: action.redirection,
+          consultants: action.consultants,
         };
-    // case ACTION :
-    //  return {
-    //      ...state,
-    //      nomaction : action.nomaction
-    // }
+
       default:
         return state;
     }

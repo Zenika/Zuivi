@@ -1,0 +1,58 @@
+{
+    "consultants" : [
+        {   "id": "1",
+            "firstname": "Taaki",
+            "lastname": "Nakagami",
+            "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/919.jpg",
+            "start_z": "2018-08-22",
+            "client": "Bogan, Beer and Watsica",
+            "start_client": "2022-10-03",
+            "jaz": 92,
+            "training_given": 25,
+            "training_received": 6,
+            "meeting_points" : [
+                                {"type": "type 1", "date": "2022-10-03", "comment": "Aliqua laboris Lorem enim in commodo anim ex nostrud dolore incididunt adipisicing.", "id": "1"},
+                                { "type": "type 3", "date": "2022-08-19", "comment": "In elit adipisicing ut minim voluptate cillum ex tempor ipsum.", "id": "2"},
+                                { "type": "type 1", "date": "2022-06-03", "comment": "Deserunt irure esse adipisicing irure ut excepteur consectetur nisi pariatur exercitation nostrud veniam.", "id": "3"},
+                                { "type": "type 3", "date": "2022-03-19", "comment": "Ex in officia elit fugiat duis id Lorem.", "id": "4"},
+                                { "type": "type 1", "date": "2022-01-03", "comment": "Exercitation nisi ea sunt qui commodo ipsum.", "id": "5"},
+                                { "type": "type 3", "date": "2021-10-19", "comment": "Nulla fugiat aliqua anim ea adipisicing nostrud fugiat laboris aliqua incididunt.", "id": "6"}
+                             ]
+         },
+         {   "id": "2",
+         "firstname": "Brad",
+         "lastname": "Binder",
+         "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/919.jpg",
+         "start_z": "2021-12-01",
+         "client": "Décathlon",
+         "start_client": "2022-01-03",
+         "jaz": 92,
+         "training_given": 25,
+         "training_received": 6,
+         "meeting_points" : [
+                             {"type": "type 1", "date": "2022-10-03", "comment": "Aliqua laboris Lorem enim in commodo anim ex nostrud dolore incididunt adipisicing.", "id": "1"},
+                             { "type": "type 3", "date": "2022-08-19", "comment": "In elit adipisicing ut minim voluptate cillum ex tempor ipsum.", "id": "2"},
+                             { "type": "type 1", "date": "2022-06-03", "comment": "Deserunt irure esse adipisicing irure ut excepteur consectetur nisi pariatur exercitation nostrud veniam.", "id": "3"}
+                          ]
+      }
+    ],
+
+    "typeOfMeeting" : [
+        {
+            "name": "Customer Functionality Technician",
+            "id": "1"
+        },
+        {
+            "name": "Career path",
+            "id": "2"
+        },
+        {
+            "name": "Entretien annuel",
+            "id": "3"
+        },
+        {
+            "name": "Pause café",
+            "id": "4"
+        }
+    ]
+}
