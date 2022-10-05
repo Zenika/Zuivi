@@ -6,7 +6,7 @@ const getConsultantMiddleware = (store) => (next) => (action) => {
         case GET_CONSULTANTS: {
           axios.get('http://localhost:3000/consultants')
             .then((response) => {
-                console.log(response.data);
+                // console.log(response.data);
               store.dispatch(saveConsultants(response.data));
             });
     

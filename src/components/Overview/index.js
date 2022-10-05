@@ -3,13 +3,13 @@ import './style.scss';
 import zenika from 'src/assets/images/Vertical_White_Logo Zenika.png';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import BlockConsultant from './blockConsultant';
+import BlockConsultant from './BlockConsultant';
 
 
 // Composant
 function Overview() {
     const { consultants } = useSelector((state) => state.consultant);
-    console.log(consultants);
+    consultants.length > 0 ? console.log(consultants[0].meeting_points[consultants[0].meeting_points.length - 1].date) : console.log('c\'est pas encore arrivé');
     return (
         <main className="container__index">
             <div className="leftPanel">
@@ -19,9 +19,14 @@ function Overview() {
             </div>
             <div className="overview">
 
-                { consultants.meetinglength > 0 &&
+                { consultants.length > 0 &&
                 consultants.map((consultant) => (
-                    <BlockConsultant {...consultant}/>
+                    <Link key={consultant.id} to="/consultant" className="tracking">
+                        <div className={`tracking__consultant tracking__consultant--${consultant.tracking_status}`}>{consultant.firstname}</div>
+                        <div className="tracking__date tracking__date--urgent">{consultant.meeting_points[consultant.meeting_points.length - 1].date}</div>
+                    </Link>
+                    // <div key={consultant.id}>{consultant.firstname}</div>
+                    
                 ))}
 
                 {/* <Link to="/consultant" className="tracking">

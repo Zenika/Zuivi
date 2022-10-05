@@ -10,6 +10,7 @@
             "jaz": 92,
             "training_given": 25,
             "training_received": 6,
+            "tracking_status": "urgent",
             "meeting_points" : [
                                 {"type": "type 1", "date": "2022-10-03", "comment": "Aliqua laboris Lorem enim in commodo anim ex nostrud dolore incididunt adipisicing.", "id": "1"},
                                 { "type": "type 3", "date": "2022-08-19", "comment": "In elit adipisicing ut minim voluptate cillum ex tempor ipsum.", "id": "2"},
@@ -29,6 +30,7 @@
          "jaz": 92,
          "training_given": 25,
          "training_received": 6,
+         "tracking_status": "good",
          "meeting_points" : [
                              {"type": "type 1", "date": "2022-10-03", "comment": "Aliqua laboris Lorem enim in commodo anim ex nostrud dolore incididunt adipisicing.", "id": "1"},
                              { "type": "type 3", "date": "2022-08-19", "comment": "In elit adipisicing ut minim voluptate cillum ex tempor ipsum.", "id": "2"},
