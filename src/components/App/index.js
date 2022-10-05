@@ -11,6 +11,7 @@ import Connexion from '../Connexion';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getConsultants } from '../../actions/getConsultants';
+import { getTypeOfMeeting } from '../../actions/getTypeOfMeeting';
 
 
 // == Composant
@@ -18,7 +19,8 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getConsultants())
+    dispatch(getConsultants());
+    dispatch(getTypeOfMeeting())
   }, []);
 
   return (
@@ -29,7 +31,7 @@ function App() {
         <Route path='/connexion' element={<Connexion />} />
         <Route path='/meetingpoint' element={<MeetingPoint/>} />
         <Route path='/newconsultant' element={<NewConsultant />} />
-        <Route path='/consultant' element={<Consultant />} /> //TODO = dynamiser slug : 
+        <Route path='/consultant/:id' element={<Consultant />} /> //TODO = dynamiser slug : 
         <Route path='/consultant/edit' element={<EditConsutant />} />
         {/* <Route path='*' element={} /> */}
 

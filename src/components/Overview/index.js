@@ -3,13 +3,11 @@ import './style.scss';
 import zenika from 'src/assets/images/Vertical_White_Logo Zenika.png';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import BlockConsultant from './BlockConsultant';
 
 
 // Composant
 function Overview() {
     const { consultants } = useSelector((state) => state.consultant);
-    consultants.length > 0 ? console.log(consultants[0].meeting_points[consultants[0].meeting_points.length - 1].date) : console.log('c\'est pas encore arrivé');
     return (
         <main className="container__index">
             <div className="leftPanel">
@@ -21,97 +19,12 @@ function Overview() {
 
                 { consultants.length > 0 &&
                 consultants.map((consultant) => (
-                    <Link key={consultant.id} to="/consultant" className="tracking">
+                    <Link key={consultant.id} to={`/consultant/${consultant.id}`} className="tracking">
                         <div className={`tracking__consultant tracking__consultant--${consultant.tracking_status}`}>{consultant.firstname}</div>
-                        <div className="tracking__date tracking__date--urgent">{consultant.meeting_points[consultant.meeting_points.length - 1].date}</div>
+                        <div className={`tracking__date tracking__date--${consultant.tracking_status}`}>{consultant.meeting_points[consultant.meeting_points.length - 1].date}</div>
                     </Link>
-                    // <div key={consultant.id}>{consultant.firstname}</div>
-                    
                 ))}
 
-                {/* <Link to="/consultant" className="tracking">
-                    <div className="tracking__consultant tracking__consultant--urgent">Taaki</div>
-                    <div className="tracking__date tracking__date--urgent">16/07</div>
-                </Link>
-
-                <Link to="/consultant" className="tracking">
-                    <div className="tracking__consultant tracking__consultant--urgent">Brad</div>
-                    <div className="tracking__date tracking__date--urgent">18/07</div>
-                </Link>
-                <Link to="/consultant" className="tracking">
-                    <div className="tracking__consultant tracking__consultant--urgent">Enea</div>
-                    <div className="tracking__date tracking__date--urgent">24/07</div>
-                </Link>
-                <Link to="/consultant" className="tracking">
-                    <div className="tracking__consultant tracking__consultant--urgent">Jack</div>
-                    <div className="tracking__date tracking__date--urgent">29/07</div>
-                </Link>
-                <Link to="/consultant" className="tracking">
-                    <div className="tracking__consultant tracking__consultant--follow">Johann</div>
-                    <div className="tracking__date tracking__date--follow">02/08</div>
-                </Link>
-                <Link to="/consultant" className="tracking">
-                    <div className="tracking__consultant tracking__consultant--follow">Pol</div>
-                    <div className="tracking__date tracking__date--follow">08/08</div>
-                </Link>
-                <Link to="/consultant" className="tracking">
-                    <div className="tracking__consultant tracking__consultant--follow">Tatsuki</div>
-                    <div className="tracking__date tracking__date--follow">11/08</div>
-                </Link>
-                <Link to="/consultant" className="tracking">
-                    <div className="tracking__consultant tracking__consultant--follow">Denis</div>
-                    <div className="tracking__date tracking__date--follow">11/08</div>
-                </Link>
-                <Link to="/consultant" className="tracking">
-                    <div className="tracking__consultant tracking__consultant--follow">Jorge</div>
-                    <div className="tracking__date tracking__date--follow">18/08</div>
-                </Link>
-                <Link to="/consultant" className="tracking">
-                    <div className="tracking__consultant tracking__consultant--follow">Maverick</div>
-                    <div className="tracking__date tracking__date--follow">21/08</div>
-                </Link>
-        
-                <Link to="/consultant" className="tracking">
-                    <div className="tracking__consultant tracking__consultant--follow">Fabio</div>
-                    <div className="tracking__date tracking__date--follow">21/08</div>
-                </Link>
-                <Link to="/consultant" className="tracking">
-                    <div className="tracking__consultant tracking__consultant--follow">Darryn</div>
-                    <div className="tracking__date tracking__date--follow">28/08</div>
-                </Link>
-                <Link to="/consultant" className="tracking">
-                    <div className="tracking__consultant tracking__consultant--follow">Jaume</div>
-                    <div className="tracking__date tracking__date--follow">30/08</div>
-                </Link>
-                <Link to="/consultant" className="tracking">
-                    <div className="tracking__consultant tracking__consultant--good">Aleix</div>
-                    <div className="tracking__date tracking__date--good">02/09</div>
-                </Link>
-                <Link to="/consultant" className="tracking">
-                    <div className="tracking__consultant tracking__consultant--good">Anna</div>
-                    <div className="tracking__date tracking__date--good">02/09</div>
-                </Link>
-                <Link to="/consultant" className="tracking">
-                    <div className="tracking__consultant tracking__consultant--good">Augusto</div>
-                    <div className="tracking__date tracking__date--good">05/09</div>
-                </Link>
-                <Link to="/consultant" className="tracking">
-                    <div className="tracking__consultant tracking__consultant--good">Pecco</div>
-                    <div className="tracking__date tracking__date--good">08/09</div>
-                </Link>
-        
-                <Link to="/consultant" className="tracking">
-                    <div className="tracking__consultant tracking__consultant--good">Maria</div>
-                    <div className="tracking__date tracking__date--good">11/09</div>
-                </Link>
-                <Link to="/consultant" className="tracking">
-                    <div className="tracking__consultant tracking__consultant--good">Toprak</div>
-                    <div className="tracking__date tracking__date--good">17/09</div>
-                </Link>
-                <Link to="/consultant" className="tracking">
-                    <div className="tracking__consultant tracking__consultant--good">Jake</div>
-                    <div className="tracking__date tracking__date--good">20/09</div>
-                </Link> */}
             </div>
 
         </main>

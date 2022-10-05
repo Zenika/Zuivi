@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
   consultant: consultantReducer,
   // manageConsultant: manageConsultantReducer,
   // manageMeetingPoint: manageMeetingPointReducer,
-  // typeOfMeeting: typeOfMeetingReducer,
+  typeOfMeeting: typeOfMeetingReducer,
 
 });
 

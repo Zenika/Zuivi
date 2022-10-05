@@ -1,20 +1,25 @@
-import axios from 'axios';
-// import ACTION et/ou action from 'files'
+import axios from "axios";
+import { GET_CONSULTANT_BY_ID, saveConsultantById } from "../actions/getConsultantById";
+
 
 const getConsultantMiddleware = (store) => (next) => (action) => {
+    switch (action.type) {
+        case GET_CONSULTANT_BY_ID: {
+          axios.get(`http://localhost:3000/consultants/${action.id}`)
+            .then((response) => {
+              // console.log(response.data);
+              store.dispatch(saveConsultantById(response.data));
+            });
+    
+          break;
+        }
+    
+        default:
+      }
 
-//   switch (action.type) {
-//       case ACTION: {
-//         axios.get/post/delete(endpoint, config)
-//             .then((response) => {
-//                 store.dispatch(action(response.ladata));
-//             });
-//         break;
-//     }
-//     default:  
-//   }
+    next(action);
 
-  next(action);
-};
+    
+}
 
 export default getConsultantMiddleware;

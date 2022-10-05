@@ -1,8 +1,10 @@
+import { SAVE_CONSULTANT_BY_ID } from "../actions/getConsultantById";
 import { SAVE_CONSULTANTS } from "../actions/getConsultants";
 
   
   export const initialState = {
     consultants: {},
+    consultantById: {},
   };
   
   const reducer = (state = initialState, action = {}) => {
@@ -13,8 +15,15 @@ import { SAVE_CONSULTANTS } from "../actions/getConsultants";
           consultants: action.consultants,
         };
 
+        case SAVE_CONSULTANT_BY_ID:
+        return {
+          ...state,
+          consultantById: action.consultantById,
+        };
+
       default:
         return state;
+
     }
   };
   
