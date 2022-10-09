@@ -8,7 +8,7 @@ import typeOfMeetingReducer from './typeOfMeeting';
 
 const rootReducer = combineReducers({
   consultant: consultantReducer,
-  // manageConsultant: manageConsultantReducer,
+  manageConsultant: manageConsultantReducer,
   // manageMeetingPoint: manageMeetingPointReducer,
   typeOfMeeting: typeOfMeetingReducer,
 

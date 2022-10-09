@@ -3,11 +3,20 @@ import './style.scss';
 import zenika from 'src/assets/images/Vertical_White_Logo Zenika.png';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { RingLoader } from 'react-spinners';
 
 
 // Composant
 function Overview() {
-    const { consultants } = useSelector((state) => state.consultant);
+    const { consultants, consultantsIsLoading } = useSelector((state) => state.consultant);
+    console.log(consultantsIsLoading, consultants);
+    const override = {
+        display: "block",
+        margin: "0 auto",
+        borderColor: "red",
+      };
+    const color = "#bf046e"
+
     return (
         <main className="container__index">
             <div className="leftPanel">
@@ -17,13 +26,17 @@ function Overview() {
             </div>
             <div className="overview">
 
-                { consultants.length > 0 &&
+                { consultantsIsLoading === true
+                ?
+                <RingLoader color={color} loading={consultantsIsLoading} cssOverride={override} size={150} aria-label="Ring Loader" />
+                :
                 consultants.map((consultant) => (
                     <Link key={consultant.id} to={`/consultant/${consultant.id}`} className="tracking">
                         <div className={`tracking__consultant tracking__consultant--${consultant.tracking_status}`}>{consultant.firstname}</div>
                         <div className={`tracking__date tracking__date--${consultant.tracking_status}`}>{consultant.meeting_points[consultant.meeting_points.length - 1].date}</div>
                     </Link>
-                ))}
+                ))
+                }
 
             </div>
 

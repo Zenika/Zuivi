@@ -18,7 +18,7 @@ const enhancers = composeEnhancers(
     getConsultantByIdMiddleware,
     getConsultantMiddleware,
     getTypeOfMeetingMiddleware,
-    // manageConsultantMiddleware,
+    manageConsultantMiddleware,
     // manageMeetingPointMiddleware
   ),
 );
