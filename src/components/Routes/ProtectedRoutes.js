@@ -1,7 +1,7 @@
 import { Navigate } from 'react-router-dom';
 
 const ProtectedRoutes = ({ children }) => {
-  const isLogged = localStorage.getItem('isLogged');
+  const isLogged = sessionStorage.getItem('isLogged');
 
   return isLogged ? children : <Navigate to="/" />;
 };

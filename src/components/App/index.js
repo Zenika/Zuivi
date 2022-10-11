@@ -1,6 +1,6 @@
 // == Import
 import './styles.scss';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import Header from '../Header';
 import Overview from '../Overview';
 import MeetingPoint from '../MeetingPoint';
@@ -9,7 +9,7 @@ import Consultant from '../Consultant';
 import EditConsutant from '../EditConsultant';
 import Connexion from '../Connexion';
 import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { getConsultants } from '../../actions/getConsultants';
 import { getTypeOfMeeting } from '../../actions/getTypeOfMeeting';
 import PublicRoutes from '../Routes/PublicRoutes';
@@ -20,6 +20,14 @@ import ProtectedRoutes from '../Routes/ProtectedRoutes';
 function App() {
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { redirection } = useSelector((state) => state.user);
+  
+  useEffect(() => {
+    if (redirection !== null) {
+      navigate(redirection);
+    }
+  }, [redirection]);
 
   useEffect(() => {
     dispatch(getConsultants());

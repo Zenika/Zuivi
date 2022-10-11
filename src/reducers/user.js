@@ -1,10 +1,11 @@
-import { CHANGE_LOGIN_FIELD, SAVE_USER_DATA } from "../actions/authentication";
+import { CHANGE_LOGIN_FIELD, CHANGE_REDIRECTION, SAVE_USER_DATA } from "../actions/authentication";
 
 
   
   export const initialState = {
     email: '',
-    password: ''
+    password: '',
+    redirection: null,
   };
   
   const reducer = (state = initialState, action = {}) => {
@@ -20,6 +21,12 @@ import { CHANGE_LOGIN_FIELD, SAVE_USER_DATA } from "../actions/authentication";
             ...state,
             connectedUser: action.user.user,
         };
+
+        case CHANGE_REDIRECTION:
+          return {
+            ...state,
+            redirection: action.redirection
+          }
 
       default:
         return state;
