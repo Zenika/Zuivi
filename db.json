@@ -1,4 +1,11 @@
 {
+  "users": [
+    {
+      "email": "test@test.test",
+      "password": "$2a$10$GHfAioMXUieJswdAFHfQs.VzQ2lJbiWEJ2khpsAuX3A1PgJPDMOOm",
+      "id": 1
+    }
+  ],
   "consultants": [
     {
       "id": "1",

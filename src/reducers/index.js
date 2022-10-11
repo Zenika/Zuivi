@@ -4,6 +4,7 @@ import consultantReducer from './consultant';
 import manageConsultantReducer from './manageConsultant';
 import manageMeetingPointReducer from './manageMeetingPoint';
 import typeOfMeetingReducer from './typeOfMeeting';
+import userReducer from './user';
 
 
 const rootReducer = combineReducers({
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
   manageConsultant: manageConsultantReducer,
   // manageMeetingPoint: manageMeetingPointReducer,
   typeOfMeeting: typeOfMeetingReducer,
+  user: userReducer
 
 });
 
