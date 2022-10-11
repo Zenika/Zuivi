@@ -16,12 +16,6 @@ import { getTypeOfMeeting } from '../../actions/getTypeOfMeeting';
 
 // == Composant
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getConsultants());
-    dispatch(getTypeOfMeeting())
-  }, []);
 
   return (
     <div className="app">
@@ -32,7 +26,7 @@ function App() {
         <Route path='/meetingpoint' element={<MeetingPoint/>} />
         <Route path='/newconsultant' element={<NewConsultant />} />
         <Route path='/consultant/:id' element={<Consultant />} /> //TODO = dynamiser slug : 
-        <Route path='/consultant/edit' element={<EditConsutant />} />
+        <Route path='/consultant/:id/edit' element={<EditConsutant />} />
         {/* <Route path='*' element={} /> */}
 
       </Routes>

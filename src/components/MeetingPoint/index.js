@@ -34,7 +34,7 @@ function MeetingPoint() {
 
             </select>
             <label htmlFor="comment" className="form__label">Comment</label>
-            <textarea name="comment" id="" cols="50" rows="20" className="form__comment"></textarea>
+            <textarea name="comment" id="" cols="50" rows="10" className="form__comment"></textarea>
             <Link to="/"><button className="form__button">Add +</button></Link>
         </div>
     </main>

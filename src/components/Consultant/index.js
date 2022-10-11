@@ -28,7 +28,7 @@ function Consultant() {
         {
             consultantById &&
             <>
-                  <div className="left">
+                <div className="left">
                     <div className="consultant">
                         <img className="consultant__picture" src={consultantById.avatar} alt="" />
                         <div className="consultant__name">
@@ -44,7 +44,7 @@ function Consultant() {
                         JAZ days : {consultantById.jaz}<br />
                         Training given : {consultantById.training_given}<br />
                         Training received : {consultantById.training_received}<br />
-                        <Link to="/consultant/edit"><img src={editIcon} className="infos__modif"></img></Link>
+                        <Link to={`/consultant/${consultantById.id}/edit`}><img src={editIcon} className="infos__modif"></img></Link>
                     </div>
             
                     <div className="trackingInfos">
@@ -70,7 +70,6 @@ function Consultant() {
 
                 </div>
             </>
-
         }
         </main>
     )

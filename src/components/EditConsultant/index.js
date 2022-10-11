@@ -8,6 +8,12 @@ import { useSelector } from 'react-redux';
 function EditConsutant() {
     const consultant = useSelector((state) => state.manageConsultant)
     console.log(consultant);
+    const handleDelete = () => {
+
+    }
+    const handleModify = () => {
+        
+    }
     return (
         <main className="container__modifConsultant">
             <div className="form">
@@ -28,7 +34,10 @@ function EditConsutant() {
                 <input type="number" name="trainingGiven" id="" className="form__input" value="4" />
                 <label htmlFor="trainingReceived" className="form__label">Number of training received</label>
                 <input type="number" name="trainingReceived" id="" className="form__input" value="7" />
-                <a href="./consultant.html"><button className="form__button">Modify &#10004;</button></a>
+                <div className='form__buttons'>
+                    <button onClick={handleModify} className="form__button">Modify &#10004;</button>
+                    <button onClick={handleDelete} className="form__button">Delete &#9003;</button>
+                </div>
             </div>
         </main>
     )
