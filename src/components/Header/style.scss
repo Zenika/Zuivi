@@ -6,38 +6,58 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-}
 
-.header__image {
-    height: 5em;
-}
-.header__title {
-    text-shadow: black 2px 2px 2px;
-    font-family: 'Press Start 2P', cursive;
-    font-size: 2em;
-}
+    &__image {
+        height: 50px;
+    }
 
-.header__button {
-    font-family: 'Comfortaa', cursive;
-    font-size: 1em;
-    font-weight: 700;
-    border: none;
-    height: 4em;
-    padding: 1.2em;
-    border-radius: 50px;
-    border-radius: 50px;
-    color: white;
-    border-radius: 17px;
-    background: linear-gradient(145deg, #cc0476, #ac0463);
-    box-shadow:  6px 6px 12px #82034b,
+    &__title {
+        text-shadow: black 2px 2px 2px;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 15px;
+    }
+
+    &__button {
+        font-family: 'Comfortaa', cursive;
+        font-size: .7em;
+        font-weight: 700;
+        border: none;
+        height: 40px;
+        padding: .6em;
+        border-radius: 50px;
+        border-radius: 50px;
+        color: white;
+        border-radius: 17px;
+        background: linear-gradient(145deg, #cc0476, #ac0463);
+        box-shadow:  6px 6px 12px #82034b,
+                     -6px -6px 12px #fc0591;
+        text-shadow: black 2px 2px 2px;
+        cursor: pointer;
+    }
+
+    &__button:hover {
+        border-radius: 17px;
+        background: linear-gradient(145deg, #ac0463, #cc0476);
+        box-shadow:  6px 6px 12px #82034b,
                  -6px -6px 12px #fc0591;
-    text-shadow: black 2px 2px 2px;
-    cursor: pointer;
+    }
+    
 }
 
-.header__button:hover {
-    border-radius: 17px;
-    background: linear-gradient(145deg, #ac0463, #cc0476);
-    box-shadow:  6px 6px 12px #82034b,
-             -6px -6px 12px #fc0591;
-            }
+
+@media (min-width: 800px) {
+    .header {
+        &__image {
+            height: 100px;
+        }
+
+        &__title {
+            font-size: 40px;
+        }
+
+        &__button {
+            font-size: 1.8em;
+            height: 80px;
+        }
+    }
+}

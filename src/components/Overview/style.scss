@@ -1,99 +1,223 @@
 @import '../../styles/vars';
 
 .container__index {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 3em;
+    padding-top: 1em;
 }
 
 .overview {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    height: 80vh;
-    padding-top: 2em;
-    margin-left: 2em;
-    width: 40%;
+    align-items: center;
+    padding-top: .5em;
+    margin-bottom: 2em;
 }
 
 .tracking {
     display: flex;
     height: 8.5%;
-    margin: .2em 2em;
+    margin: .2em 1em;
     font-size: 1.2em;
     font-weight: 500;
     text-shadow: black 2px 2px 2px;
-}
-.tracking__consultant {
-    padding: .5em;
-    padding-left: 1em;
-    margin-right: .5em;
-    border-radius: 10px;
-    width: 7em;
-    display: flex;
-    align-items: center;
-}
 
-.tracking__date {
-    padding: .5em;
-    width: 4em;
-    border-radius:10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    &__consultant {
+        padding: .5em;
+        padding-left: 1em;
+        margin-right: .5em;
+        border-radius: 10px;
+        width: 8.5em;
+        display: flex;
+        align-items: center;
+    }
 
-.tracking__consultant--urgent {
-    background-color: $urgent;
-}
+    &__date {
+        padding: .5em;
+        width: 6.5em;
+        border-radius:10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.tracking__consultant--follow {
-    background-color: $follow;
-}
+    &__consultant--urgent {
+        background-color: $urgent;
+    }
 
-.tracking__consultant--good {
-    background-color: $good;
-}
+    &__consultant--follow {
+        background-color: $follow;
+    }
 
-.tracking__date--urgent {
-    background-color: $urgent;
-}
+    &__consultant--good {
+        background-color: $good;
+    }
 
-.tracking__date--follow {
-    background-color: $follow;
-}
+    &__date--urgent {
+        background-color: $urgent;
+    }
 
-.tracking__date--good {
-    background-color: $good;
+    &__date--follow {
+        background-color: $follow;
+    }
+
+    &__date--good {
+        background-color: $good;
+    }
 }
 
 .leftPanel {
-    height: 90%;
-    width: 30%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    margin-right: 2em;
+
+    &__image {
+        display: none;
+    }
+
+    &__button {
+        margin: .5em;
+        background: $zenikaGradient;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-family: 'Comfortaa', cursive;
+        font-size: 1em;
+        font-weight: 700;
+        padding: 1em;
+        text-shadow: black 2px 2px 2px;
+        cursor: pointer;
+    }
 }
 
-.leftPanel__image {
-    width: 25em;
+@media (min-width: 800px) {
+    .container__index{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .overview {
+        flex-wrap: wrap;
+        height: 80vh;
+        margin-left: 2em;
+        margin-top: 2em;
+        width: 40%;
+    }
+
+    .leftPanel {
+        height: 80%;
+        width: 30%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 2em;
+        
+        &__image {
+            width: 22em;
+            display: block;
+        }
+
+        &__button {
+            width: 10em;
+            height: 5em;
+            font-size: 2em;
+        }
+    }
 }
 
-.leftPanel__button {
-    width: 10em;
-    height: 5em;
-    margin: .5em;
-    background: $zenikaGradient;
-    border: none;
-    border-radius: 10px;
-    color: white;
-    font-family: 'Comfortaa', cursive;
-    font-size: 2em;
-    font-weight: 700;
-    padding: 1em;
-    text-shadow: black 2px 2px 2px;
-    cursor: pointer;
-}
+// .container__index {
+//     display: flex;
+//     justify-content: center;
+//     align-items: flex-start;
+//     padding-top: 3em;
+// }
+
+// .overview {
+//     display: flex;
+//     flex-direction: column;
+//     flex-wrap: wrap;
+//     height: 80vh;
+//     padding-top: 2em;
+//     margin-left: 2em;
+//     width: 40%;
+// }
+
+// .tracking {
+//     display: flex;
+//     height: 8.5%;
+//     margin: .2em 2em;
+//     font-size: 1.2em;
+//     font-weight: 500;
+//     text-shadow: black 2px 2px 2px;
+
+//     &__consultant {
+//         padding: .5em;
+//         padding-left: 1em;
+//         margin-right: .5em;
+//         border-radius: 10px;
+//         width: 7em;
+//         display: flex;
+//         align-items: center;
+//     }
+
+//     &__date {
+//         padding: .5em;
+//         width: 4em;
+//         border-radius:10px;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//     }
+
+//     &__consultant--urgent {
+//         background-color: $urgent;
+//     }
+
+//     &__consultant--follow {
+//         background-color: $follow;
+//     }
+
+//     &__consultant--good {
+//         background-color: $good;
+//     }
+
+//     &__date--urgent {
+//         background-color: $urgent;
+//     }
+
+//     &__date--follow {
+//         background-color: $follow;
+//     }
+
+//     &__date--good {
+//         background-color: $good;
+//     }
+// }
+
+// .leftPanel {
+//     height: 90%;
+//     width: 30%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+//     margin-right: 2em;
+
+//     &__image {
+//         width: 25em;
+//     }
+
+//     &__button {
+//         width: 10em;
+//         height: 5em;
+//         margin: .5em;
+//         background: $zenikaGradient;
+//         border: none;
+//         border-radius: 10px;
+//         color: white;
+//         font-family: 'Comfortaa', cursive;
+//         font-size: 2em;
+//         font-weight: 700;
+//         padding: 1em;
+//         text-shadow: black 2px 2px 2px;
+//         cursor: pointer;
+//     }
+// }

@@ -54,6 +54,11 @@
         align-self: center;
     }
 
+    &__buttons {
+        display: flex;
+        justify-content: center;
+    }
+
     & a{
         align-self: center;
     }

@@ -2,21 +2,12 @@
 import './style.scss';
 import zenika from 'src/assets/images/Vertical_White_Logo Zenika.png';
 import { Link } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { RingLoader } from 'react-spinners';
-import { useEffect } from 'react';
-import { getConsultants } from '../../actions/getConsultants';
-import { getTypeOfMeeting } from '../../actions/getTypeOfMeeting';
 
 
 // Composant
 function Overview() {
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-      dispatch(getConsultants());
-      dispatch(getTypeOfMeeting())
-    }, []);
 
     const { consultants, consultantsIsLoading } = useSelector((state) => state.consultant);
     console.log(consultantsIsLoading, consultants);

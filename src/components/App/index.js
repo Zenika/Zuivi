@@ -17,6 +17,13 @@ import { getTypeOfMeeting } from '../../actions/getTypeOfMeeting';
 // == Composant
 function App() {
 
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getConsultants());
+    dispatch(getTypeOfMeeting())
+  }, []);
+
   return (
     <div className="app">
       <Header />
