@@ -10,7 +10,6 @@ import { RingLoader } from 'react-spinners';
 function Overview() {
 
     const { consultants, consultantsIsLoading } = useSelector((state) => state.consultant);
-    console.log(consultantsIsLoading, consultants);
     const override = {
         display: "block",
         margin: "0 auto",

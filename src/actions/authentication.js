@@ -1,6 +1,7 @@
 export const CHANGE_LOGIN_FIELD = 'CHANGE_LOGIN_FIELD';
 export const LOG_IN = 'LOG_IN';
 export const SAVE_USER_DATA = 'SAVE_USER_DATA';
+export const LOG_OUT = 'LOG_OUT'
 
 export const changeLoginField = (value, fieldIdentifier) => ({
     type: CHANGE_LOGIN_FIELD,
@@ -15,4 +16,8 @@ export const changeLoginField = (value, fieldIdentifier) => ({
   export const saveUserData = (user) => ({
     type: SAVE_USER_DATA,
     user: user
+  });
+  
+  export const logout = () => ({
+    type: LOG_OUT,
   })

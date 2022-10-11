@@ -17,10 +17,6 @@ function Consultant() {
     }, [])
 
     const { consultantById } = useSelector((state) => state.consultant)
-    // console.log(consultantById);
-    // console.log(consultantById[0].lastname);
-    // console.log(consultantById.start_z);
-    // console.log(consultantById.start_client);
 
     return (
         <main className="container__consultant">

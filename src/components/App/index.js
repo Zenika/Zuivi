@@ -12,6 +12,8 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getConsultants } from '../../actions/getConsultants';
 import { getTypeOfMeeting } from '../../actions/getTypeOfMeeting';
+import PublicRoutes from '../Routes/PublicRoutes';
+import ProtectedRoutes from '../Routes/ProtectedRoutes';
 
 
 // == Composant
@@ -26,15 +28,50 @@ function App() {
 
   return (
     <div className="app">
-      <Header />
       <Routes>
-        <Route path='/' element={<Overview />} />
-        <Route path='/connexion' element={<Connexion />} />
-        <Route path='/meetingpoint' element={<MeetingPoint/>} />
-        <Route path='/newconsultant' element={<NewConsultant />} />
-        <Route path='/consultant/:id' element={<Consultant />} /> //TODO = dynamiser slug : 
-        <Route path='/consultant/:id/edit' element={<EditConsutant />} />
-        {/* <Route path='*' element={} /> */}
+
+        <Route path='/' element={
+          <PublicRoutes>
+            <Connexion />
+          </PublicRoutes>
+        } />
+
+        <Route path='/overview' element={
+          <ProtectedRoutes>
+            <Header />
+            <Overview />
+          </ProtectedRoutes>
+        } />
+
+        <Route path='/meetingpoint' element={
+          <ProtectedRoutes>
+            <Header />
+            <MeetingPoint />
+          </ProtectedRoutes>
+        } />
+
+        <Route path='/newconsultant' element={
+          <ProtectedRoutes>
+            <Header />
+            <NewConsultant />
+          </ProtectedRoutes>
+       } />
+
+        <Route path='/consultant/:id' element={
+          <ProtectedRoutes>
+            <Header />
+            <Consultant />
+          </ProtectedRoutes>
+        } />
+
+        <Route path='/consultant/:id/edit' element={
+          <ProtectedRoutes>
+            <Header />
+            <EditConsutant />
+          </ProtectedRoutes>
+        } />
+
+        {/* <Route path='*' element={} /> */} //TODO ERRRRRRROOOORRRRR Page
 
       </Routes>
 
