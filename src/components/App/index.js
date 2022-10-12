@@ -8,6 +8,7 @@ import NewConsultant from '../NewConsultant';
 import Consultant from '../Consultant';
 import EditConsutant from '../EditConsultant';
 import Connexion from '../Connexion';
+import Error from '../Error';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getConsultants } from '../../actions/getConsultants';
@@ -79,7 +80,7 @@ function App() {
           </ProtectedRoutes>
         } />
 
-        {/* <Route path='*' element={} /> */} //TODO ERRRRRRROOOORRRRR Page
+        <Route path='*' element={<Error />} /> //TODO ERRRRRRROOOORRRRR Page
 
       </Routes>
 

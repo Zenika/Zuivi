@@ -1,11 +1,11 @@
 // Imports
 import './style.scss';
-import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 
 // Composant
 function EditConsutant() {
+    const { consulantById } = userSelector((state) => state.user)
     const consultant = useSelector((state) => state.manageConsultant)
     console.log(consultant);
     const handleDelete = () => {
