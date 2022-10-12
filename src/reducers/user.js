@@ -1,10 +1,11 @@
-import { CHANGE_LOGIN_FIELD, CHANGE_REDIRECTION, SAVE_USER_DATA } from "../actions/authentication";
+import { CHANGE_LOGIN_FIELD, CHANGE_REDIRECTION, CLEAN_AUTH_FIELD, SAVE_USER_DATA } from "../actions/authentication";
 
 
   
   export const initialState = {
     email: '',
     password: '',
+    passwordVerification: '',
     redirection: null,
   };
   
@@ -26,6 +27,14 @@ import { CHANGE_LOGIN_FIELD, CHANGE_REDIRECTION, SAVE_USER_DATA } from "../actio
           return {
             ...state,
             redirection: action.redirection
+          }
+
+        case CLEAN_AUTH_FIELD:
+          return {
+            ...state,
+            email: '',
+            password: '',
+            passwordVerification: ''
           }
 
       default:

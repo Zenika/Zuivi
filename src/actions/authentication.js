@@ -3,6 +3,7 @@ export const LOG_IN = 'LOG_IN';
 export const SAVE_USER_DATA = 'SAVE_USER_DATA';
 export const LOG_OUT = 'LOG_OUT';
 export const CHANGE_REDIRECTION = 'CHANGE_REDIRECTION';
+export const CLEAN_AUTH_FIELD = 'CLEAN_AUTH_FIELD';
 
 export const changeLoginField = (value, fieldIdentifier) => ({
     type: CHANGE_LOGIN_FIELD,
@@ -26,4 +27,8 @@ export const changeLoginField = (value, fieldIdentifier) => ({
   export const changeRedirection = (redirection) => ({
     type: CHANGE_REDIRECTION,
     redirection: redirection
+  });
+
+  export const cleanAuthField = () => ({
+    type: CLEAN_AUTH_FIELD,
   })

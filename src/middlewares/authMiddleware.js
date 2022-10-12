@@ -1,5 +1,5 @@
 import axios from "axios";
-import { changeRedirection, LOG_IN, LOG_OUT, saveUserData } from "../actions/authentication";
+import { changeRedirection, cleanAuthField, LOG_IN, LOG_OUT, saveUserData } from "../actions/authentication";
 
 
 
@@ -18,7 +18,8 @@ const authMiddleware = (store) => (next) => (action) => {
                     store.dispatch(saveUserData(response.data));
                     sessionStorage.setItem('JWT-Access-Token', response.data.accessToken);
                     sessionStorage.setItem('isLogged', true);
-                    store.dispatch(changeRedirection('/overview'))
+                    store.dispatch(changeRedirection('/overview'));
+                    store.dispatch(cleanAuthField())
                 });
         
             break;

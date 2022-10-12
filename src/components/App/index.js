@@ -15,6 +15,7 @@ import { getConsultants } from '../../actions/getConsultants';
 import { getTypeOfMeeting } from '../../actions/getTypeOfMeeting';
 import PublicRoutes from '../Routes/PublicRoutes';
 import ProtectedRoutes from '../Routes/ProtectedRoutes';
+import Register from '../Register';
 
 
 // == Composant
@@ -42,6 +43,12 @@ function App() {
         <Route path='/' element={
           <PublicRoutes>
             <Connexion />
+          </PublicRoutes>
+        } />
+
+        <Route path='/register' element={
+          <PublicRoutes>
+            <Register />
           </PublicRoutes>
         } />
 

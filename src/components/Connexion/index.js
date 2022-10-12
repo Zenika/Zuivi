@@ -3,6 +3,7 @@ import './style.scss';
 import logo from '../../assets/images/Vertical_White_Logo Zenika.png';
 import { useDispatch, useSelector } from 'react-redux';
 import { changeLoginField, logIn } from '../../actions/authentication';
+import { Link } from 'react-router-dom';
 
 
 // Composant
@@ -25,6 +26,7 @@ function Connexion() {
                 <input onChange={handleChange} type="email" name="email" id="email" className="formConnexion__input" placeholder="Email" value={user.email} />
                 <input onChange={handleChange} type="password" name="password" id="password" className="formConnexion__input" placeholder="Password" value={user.password} />
                 <button type="submit" className="formConnexion__button">Login</button>
+                <Link to={'/register'}>Register</Link>
             </form>
         </main>
     )
