@@ -105,7 +105,31 @@
 }
 
 .tracking__urgent {
-    background-color: #df2745;
+    background-color: $urgent;
+    padding: .3em;
+    height: 2em;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: .3em;
+}
+
+.tracking__follow {
+    background-color: $follow;
+    padding: .3em;
+    height: 2em;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 700;
+    margin: .3em;
+}
+
+.tracking__good {
+    background-color: $good;
     padding: .3em;
     height: 2em;
     border-radius: 10px;

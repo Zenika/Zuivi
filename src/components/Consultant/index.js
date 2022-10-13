@@ -45,7 +45,7 @@ function Consultant() {
             
                     <div className="trackingInfos">
                         <div className="tracking__status">Tracking status :</div>
-                        <div className={`tracking__${consultantById.tracking_status}`}>{consultantById.tracking_status}</div>
+                        <div className={`tracking__${consultantById.tracking_status}`}> {consultantById.tracking_status}</div>
                     </div>
             
                     <Link to="/meetingpoint"><button className="newMeetingPoint">Add meeting point</button></Link>
