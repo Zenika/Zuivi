@@ -11,8 +11,6 @@ import Connexion from '../Connexion';
 import Error from '../Error';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getConsultants } from '../../actions/getConsultants';
-import { getTypeOfMeeting } from '../../actions/getTypeOfMeeting';
 import PublicRoutes from '../Routes/PublicRoutes';
 import ProtectedRoutes from '../Routes/ProtectedRoutes';
 import Register from '../Register';
@@ -31,11 +29,6 @@ function App() {
       navigate(redirection);
     }
   }, [redirection]);
-
-  useEffect(() => {
-    dispatch(getConsultants());
-    dispatch(getTypeOfMeeting())
-  }, []);
 
   return (
     <div className="app">

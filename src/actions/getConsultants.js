@@ -13,6 +13,6 @@ export const saveConsultants = (consultants) => ({
 
 export const changeConsultantsIsLoading = (consultantsIsLoading) =>  ({
     type: CHANGE_CONSULTANTS_IS_LOADING,
-    consultantsIsLoading: !consultantsIsLoading
+    consultantsIsLoading: consultantsIsLoading
     
 })
