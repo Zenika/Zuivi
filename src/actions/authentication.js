@@ -11,8 +11,9 @@ export const changeLoginField = (value, fieldIdentifier) => ({
     fieldIdentifier: fieldIdentifier,
   });
   
-  export const logIn = () => ({
+  export const logIn = (credentialResponse) => ({
     type: LOG_IN,
+    credentialResponse: credentialResponse,
   });
 
   export const saveUserData = (user) => ({

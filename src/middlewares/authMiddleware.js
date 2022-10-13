@@ -7,20 +7,9 @@ const authMiddleware = (store) => (next) => (action) => {
     switch (action.type) {
         case LOG_IN: {
 
-            const { email, password } = store.getState().user;
-            axios.post('http://localhost:3000/login',
-                {
-                    email: email,
-                    password: password
-                })
-
-                .then((response) => {
-                    store.dispatch(saveUserData(response.data));
-                    sessionStorage.setItem('JWT-Access-Token', response.data.accessToken);
-                    sessionStorage.setItem('isLogged', true);
-                    store.dispatch(changeRedirection('/overview'));
-                    store.dispatch(cleanAuthField())
-                });
+                sessionStorage.setItem('JWT-Access-Token', credentialResponse.credential);
+                sessionStorage.setItem('isLogged', true);
+                store.dispatch(changeRedirection('/overview'));
         
             break;
         }

@@ -1,33 +1,42 @@
 // Imports
 import './style.scss';
 import logo from '../../assets/images/Vertical_White_Logo Zenika.png';
-import { useDispatch, useSelector } from 'react-redux';
-import { changeLoginField, logIn } from '../../actions/authentication';
-import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { changeRedirection, logIn } from '../../actions/authentication';
+import { GoogleLogin, useGoogleLogin } from '@react-oauth/google';
 
 
 // Composant
 function Connexion() {
     const dispatch = useDispatch();
-    const user = useSelector((state)=> state.user);
 
-    const handleChange = (event) => {
-        dispatch(changeLoginField(event.target.value, event.target.name))
-    }
+    // const login = useGoogleLogin({
+    //     onSuccess: credentialResponse => dispatch(logIn(credentialResponse)),
+    //     onError: console.log('Login Failed'),
+    //   });
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        dispatch(logIn());
-    }
     return (
         <main className="container__connexion">
-            <form className="formConnexion" onSubmit={handleSubmit} >
-                <img src={logo} alt="" className="formConnexion__image" />
-                <input onChange={handleChange} type="email" name="email" id="email" className="formConnexion__input" placeholder="Email" value={user.email} />
-                <input onChange={handleChange} type="password" name="password" id="password" className="formConnexion__input" placeholder="Password" value={user.password} />
-                <button type="submit" className="formConnexion__button">Login</button>
-                <Link to={'/register'}>Register</Link>
-            </form>
+            <div className="connexion" >
+                <h1 className="connexion__title">[ Zenika POC ]</h1>   
+                <img src={logo} alt="" className="connexion__image" />
+
+                {/* <div className="connexion__button" onClick={() => login()}>
+                Sign in with Google 🚀
+                </div> */}
+
+                <GoogleLogin
+                    onSuccess={credentialResponse => {
+                        console.log(credentialResponse);
+                        sessionStorage.setItem('JWT-Access-Token', credentialResponse.credential);
+                        sessionStorage.setItem('isLogged', true);
+                        dispatch(changeRedirection('/overview'));
+                    }}
+                    onError={() => {
+                        console.log('Login Failed');
+                    }}
+                />
+            </div>
         </main>
     )
 };
