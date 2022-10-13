@@ -4,6 +4,16 @@
       "email": "test@test.test",
       "password": "$2a$10$GHfAioMXUieJswdAFHfQs.VzQ2lJbiWEJ2khpsAuX3A1PgJPDMOOm",
       "id": 1
+    },
+    {
+      "email": "julien.lerouzic@zenika.com",
+      "password": "$2a$10$8hKSfrFqkEZY/CPFLFYbyO13M4/.xe/rfFFNCVp6K0C03TaKweznu",
+      "id": 2
+    },
+    {
+      "email": "fabien.cousy@zenika.com",
+      "password": "$2a$10$cPsWZCEI.IlOIHVfR155.e4yl.Ggry0ANOCAp6oHU.y2uZTjnCSbO",
+      "id": 3
     }
   ],
   "consultants": [

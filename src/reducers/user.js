@@ -1,4 +1,5 @@
 import { CHANGE_LOGIN_FIELD, CHANGE_REDIRECTION, CLEAN_AUTH_FIELD, SAVE_USER_DATA } from "../actions/authentication";
+import { CHANGE_REGISTER_FIELD } from "../actions/register";
 
 
   
@@ -36,6 +37,12 @@ import { CHANGE_LOGIN_FIELD, CHANGE_REDIRECTION, CLEAN_AUTH_FIELD, SAVE_USER_DAT
             password: '',
             passwordVerification: ''
           }
+        
+        case CHANGE_REGISTER_FIELD:
+            return {
+              ...state,
+              [action.fieldIdentifier]: action.value,
+            }
 
       default:
         return state;
