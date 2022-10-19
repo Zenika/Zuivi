@@ -2,28 +2,19 @@
 import './style.scss';
 import logo from '../../assets/images/Vertical_White_Logo Zenika.png';
 import { useDispatch } from 'react-redux';
-import { changeRedirection, logIn } from '../../actions/authentication';
-import { GoogleLogin, useGoogleLogin } from '@react-oauth/google';
+import { changeRedirection } from '../../actions/authentication';
+import { GoogleLogin } from '@react-oauth/google';
 
 
 // Composant
 function Connexion() {
     const dispatch = useDispatch();
 
-    // const login = useGoogleLogin({
-    //     onSuccess: credentialResponse => dispatch(logIn(credentialResponse)),
-    //     onError: console.log('Login Failed'),
-    //   });
-
     return (
         <main className="container__connexion">
             <div className="connexion" >
                 <h1 className="connexion__title">[ Zuivi ]</h1>   
                 <img src={logo} alt="" className="connexion__image" />
-
-                {/* <div className="connexion__button" onClick={() => login()}>
-                Sign in with Google 🚀
-                </div> */}
 
                 <GoogleLogin
                     onSuccess={credentialResponse => {

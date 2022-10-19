@@ -9,9 +9,9 @@ import { changeConsultantCreationField, consultantCreation } from '../../actions
 function NewConsultant() {
     const dispatch = useDispatch();
     const consultant = useSelector((state) => state.manageConsultant);
-    console.log(consultant);
     const handleChange = (event) => {
         dispatch(changeConsultantCreationField(event.target.value, event.target.name))
+        alert(`le profil de ${consultant.name} a bien été créé`)
     };
 
     const handleSubmit = (event) => {

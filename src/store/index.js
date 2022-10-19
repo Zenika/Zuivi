@@ -9,7 +9,6 @@ import getConsultantMiddleware from '../middlewares/getConsultantMiddleware';
 import getTypeOfMeetingMiddleware from '../middlewares/getTypeOfMeetingMiddleware';
 import manageConsultantMiddleware from '../middlewares/manageConsultantMiddleware';
 import manageMeetingPointMiddleware from '../middlewares/manageMeetingPointMiddleware';
-import registerMiddleware from '../middlewares/registerMiddleware';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -20,7 +19,6 @@ const enhancers = composeEnhancers(
     getConsultantMiddleware,
     getTypeOfMeetingMiddleware,
     manageConsultantMiddleware,
-    registerMiddleware,
     // manageMeetingPointMiddleware
   ),
 );

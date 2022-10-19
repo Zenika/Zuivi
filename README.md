@@ -28,13 +28,16 @@ l'application est accesible depuis le navigateur à l'adresse : http://localhost
 - Redux
 - Axios
 - Auth0 google
-- json-server
+- json-server (le fichier db.json à la racine contient les objets json appelés ar l'api)
 - SCSS
 
 ## -- To do --
 
-- tests unitaires
+- ajout de rdv
 - possibilité de prévoir un rdv avec connexion au google calendar
 - remodéliser la base de données (travailler sur le fichier db.json)
 - gestion de la sécurité
+- tests unitaires
 - définir les niveaux du tracking status (durée depuis le dernier rdv) et dynamiser la classe des éléments
+
+- création d'un back type API + bdd
