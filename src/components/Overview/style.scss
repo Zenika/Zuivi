@@ -40,27 +40,27 @@
     }
 
     &__consultant--urgent {
-        background-color: $urgent;
+        background: $urgent;
     }
 
     &__consultant--follow {
-        background-color: $follow;
+        background: $follow;
     }
 
     &__consultant--good {
-        background-color: $good;
+        background: $good;
     }
 
     &__date--urgent {
-        background-color: $urgent;
+        background: $urgent;
     }
 
     &__date--follow {
-        background-color: $follow;
+        background: $follow;
     }
 
     &__date--good {
-        background-color: $good;
+        background: $good;
     }
 }
 

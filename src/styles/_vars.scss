@@ -1,8 +1,10 @@
 
 //* colors *\\
-$zenikaGradient : linear-gradient(90deg, rgba(223,39,69,1) 0%, rgba(191,4,110,1) 100%);
-$urgent : #df2745;
-$follow : #fc9453;
-$good : #258900;
+$zenikaGradient : linear-gradient(45deg, #EE2238 0%, #BF1D67 100%);
+$urgent : linear-gradient(45deg, #EE2238 0%, #BF1D67 100%);
+$follow: linear-gradient(45deg, #F4C042 0%, #EB8581 100%);
+$good : linear-gradient(45deg, #00EB84 0%, #00E3EC 100%);
+// $follow : #fc9453;
+// $good : #258900;
 
 //* fonts *\\

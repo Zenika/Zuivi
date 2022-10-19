@@ -17,7 +17,7 @@ function Header() {
             <Link to="/">
                 <img src={logo} alt="" className="header__image" />
             </Link>
-            <h1 className="header__title">[ Zenika POC ]</h1>
+            <h1 className="header__title">[ Zuivi ]</h1>
             <button className="header__button" onClick={handleClick}>Logout</button>
         </header>
     )

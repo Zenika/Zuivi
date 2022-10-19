@@ -18,7 +18,7 @@ function Connexion() {
     return (
         <main className="container__connexion">
             <div className="connexion" >
-                <h1 className="connexion__title">[ Zenika POC ]</h1>   
+                <h1 className="connexion__title">[ Zuivi ]</h1>   
                 <img src={logo} alt="" className="connexion__image" />
 
                 {/* <div className="connexion__button" onClick={() => login()}>

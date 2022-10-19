@@ -4,7 +4,7 @@
     background: $zenikaGradient;
     padding: .5em;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 
     &__image {
@@ -13,25 +13,22 @@
 
     &__title {
         text-shadow: black 2px 2px 2px;
-        font-family: 'Press Start 2P', cursive;
-        font-size: 15px;
+        font-size: 35px;
+        margin: 0 40px;
     }
 
     &__button {
         font-family: 'Comfortaa', cursive;
-        font-size: .7em;
-        font-weight: 700;
+        font-size: .9em;
+        font-weight: 900;
         border: none;
         height: 40px;
-        padding: .6em;
+        padding: .5em;
         border-radius: 50px;
         border-radius: 50px;
-        color: white;
+        color: #BF1D67;
         border-radius: 17px;
-        background: linear-gradient(145deg, #cc0476, #ac0463);
-        box-shadow:  6px 6px 12px #82034b,
-                     -6px -6px 12px #fc0591;
-        text-shadow: black 2px 2px 2px;
+        background-color: white;
         cursor: pointer;
     }
 
@@ -52,12 +49,13 @@
         }
 
         &__title {
-            font-size: 40px;
+            font-size: 70px;
+            margin: 0 400px;
         }
 
         &__button {
-            font-size: 1.8em;
-            height: 80px;
+            font-size: 1.4em;
+            height: 65px;
         }
     }
 }
