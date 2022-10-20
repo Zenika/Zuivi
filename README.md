@@ -11,10 +11,10 @@
 ## -- Démarage --
 
 - installation :<br>
-    ``` npm install ```
+    ``` yarn ```
 
 - démmarage du serveur de développement :<br>
-    ```npm start```
+    ```yarn start```
 
 - démarage du server json (fake api) :<br>
     ```json-server db.json```
