@@ -7,7 +7,6 @@ import { useSelector } from 'react-redux';
 // Composant
 function MeetingPoint() {
     const { consultants } = useSelector((state) => state.consultant);
-    const { typeOfMeeting } = useSelector((state) => state.typeOfMeeting);
 
     return (
         <main className="container__newMeeting">
@@ -26,11 +25,9 @@ function MeetingPoint() {
             <label htmlFor="meeting" className="form__label">Type of meeting</label>
             <select name="meeting" id="" className="form__select">
                 <option value="">--- Please choose an option ---</option>
-
-                {typeOfMeeting.length > 0 &&
-                typeOfMeeting.map((meetingPoint) => (
-                    <option key={meetingPoint.id} value={meetingPoint.id}>{meetingPoint.name}</option>
-                ))}
+                <option value="type 1">type 1</option>
+                <option value="type 2">type 2</option>
+                <option value="type 3">type 3</option>
 
             </select>
             <label htmlFor="comment" className="form__label">Comment</label>

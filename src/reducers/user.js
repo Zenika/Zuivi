@@ -1,7 +1,4 @@
 import { CHANGE_REDIRECTION } from "../actions/authentication";
-
-
-
   
   export const initialState = {
     redirection: null,

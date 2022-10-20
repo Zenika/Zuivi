@@ -1,4 +1,4 @@
-import { changeRedirection, LOG_OUT, saveUserData } from "../actions/authentication";
+import { changeRedirection, LOG_OUT } from "../actions/authentication";
 
 
 

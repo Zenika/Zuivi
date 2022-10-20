@@ -1,6 +1,5 @@
 import { SAVE_CONSULTANT_BY_ID } from "../actions/getConsultantById";
 import { CHANGE_CONSULTANTS_IS_LOADING, SAVE_CONSULTANTS } from "../actions/getConsultants";
-import { CHANGE_CONSULTANT_MANAGE_FIELD } from "../actions/manageConsultant";
 
   
   export const initialState = {

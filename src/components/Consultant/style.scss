@@ -105,7 +105,7 @@
 }
 
 .tracking__urgent {
-    background-color: $urgent;
+    background: $urgent;
     padding: .3em;
     height: 2em;
     border-radius: 10px;
@@ -117,7 +117,7 @@
 }
 
 .tracking__follow {
-    background-color: $follow;
+    background: $follow;
     padding: .3em;
     height: 2em;
     border-radius: 10px;
@@ -129,7 +129,7 @@
 }
 
 .tracking__good {
-    background-color: $good;
+    background: $good;
     padding: .3em;
     height: 2em;
     border-radius: 10px;

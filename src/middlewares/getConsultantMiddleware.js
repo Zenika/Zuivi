@@ -7,7 +7,6 @@ const getConsultantMiddleware = (store) => (next) => (action) => {
 
           axios.get('http://localhost:3000/consultants')
             .then((response) => {
-                // console.log(response.data);
               store.dispatch(saveConsultants(response.data));
               store.dispatch(changeConsultantsIsLoading(false));
             });

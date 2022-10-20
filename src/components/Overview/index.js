@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RingLoader } from 'react-spinners';
 import { useEffect } from 'react';
 import { getConsultants } from '../../actions/getConsultants';
-import { getTypeOfMeeting } from '../../actions/getTypeOfMeeting';
 
 
 // Composant
@@ -14,12 +13,10 @@ function Overview() {
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(getConsultants());
-        dispatch(getTypeOfMeeting())
       }, []);
 
       useEffect(() => {
         dispatch(getConsultants());
-        dispatch(getTypeOfMeeting())
       }, [consultants]);
 
     const { consultants, consultantsIsLoading } = useSelector((state) => state.consultant);
@@ -39,6 +36,7 @@ function Overview() {
             </div>
             <div className="overview">
 
+            {/* tant que l'api ne répond pas consultantIsLoading est a true donc un loader est en place*/}
                 { consultantsIsLoading === true
                 ?
                 <RingLoader color={color} loading={consultantsIsLoading} cssOverride={override} size={150} aria-label="Ring Loader" />

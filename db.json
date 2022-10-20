@@ -676,46 +676,15 @@
           "id": "3"
         }
       ]
-    },
-    {
-      "firstname": "",
-      "lastname": "",
-      "start_z": "",
-      "client": "",
-      "start_client": "",
-      "jaz": 0,
-      "training_given": 0,
-      "training_received": 0,
-      "id": "BKYZR95"
-    },
-    {
-      "firstname": "",
-      "lastname": "",
-      "start_z": "",
-      "client": "",
-      "start_client": "",
-      "jaz": 0,
-      "training_given": 0,
-      "training_received": 0,
-      "id": "175iryh"
     }
   ],
-  "typeOfMeeting": [
+  "meeting_points": [
     {
-      "name": "Customer Functionality Technician",
-      "id": "1"
-    },
-    {
-      "name": "Career path",
-      "id": "2"
-    },
-    {
-      "name": "Entretien annuel",
-      "id": "3"
-    },
-    {
-      "name": "Pause café",
-      "id": "4"
+      "id": "1",
+      "type": "type 1",
+      "date": "2022-10-03",
+      "comment": "Aliqua laboris Lorem enim in commodo anim ex nostrud dolore incididunt adipisicing.",
+      "consultant_id": "1"     
     }
   ]
 }
